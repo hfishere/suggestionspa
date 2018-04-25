@@ -1,0 +1,19 @@
+<h1>Form Kritik dan Saran</h1>
+
+<form action="/api/suggestion/blabla" method="POST">
+  <div class="form-group">
+    <label for="empName">Nama Karyawan</label>
+    <input type="text" class="form-control" id="empName" placeholder="Masukkan nama.." value="{{ checked ? 'Anonymous' : '' }}" [disabled]="checked">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" (change)="checked = !checked">
+        Jadikan Anonymous
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="suggDetails">Kritik &amp; Saran</label>
+    <textarea class="form-control" rows="7" id="suggDetails"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
